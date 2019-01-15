@@ -7,12 +7,13 @@ phases:
   build:
     commands:
       - parcel build index.ts --target=node --bundle-node-modules --no-source-maps
-      - cp package.json ./dist/
-      - cp appspec.yml ./dist/
+      - cp package.json ./dist/package.json
+      - cp appspec.yml ./dist/appspec.yml
 
 artifacts:
   type: zip
   files:
     - index.js
     - package.json
+    - appspec.yml
   base-directory: dist
