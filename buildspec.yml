@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - npm install -g parcel-bundler
+      - npm install
+      - parcel build index.js --target=node --bundle-node-modules --no-source-maps
+      - cp package.json ./dist/package.json
+
+artifacts:
+  type: zip
+  files:
+    - **/*
+  base-directory: dist
