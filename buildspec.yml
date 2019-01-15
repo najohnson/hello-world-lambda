@@ -6,7 +6,7 @@ phases:
       - npm install
   build:
     commands:
-      - parcel build index.js --target=node --bundle-node-modules --no-source-maps
+      - parcel build index.ts --target=node --bundle-node-modules --no-source-maps
       - cp package.json ./dist/package.json
 
 artifacts:
