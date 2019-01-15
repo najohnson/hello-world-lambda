@@ -8,11 +8,11 @@ phases:
     commands:
       - parcel build index.ts --target=node --bundle-node-modules --no-source-maps
       - cp package.json ./dist/package.json
-      - cp appspec.json ./dist/appspec.json
+      - cp appspec.yml ./dist/appspec.yml
 
 artifacts:
   files:
     - index.js
     - package.json
-    - appspec.json
+    - appspec.yml
   base-directory: dist
