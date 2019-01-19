@@ -12,7 +12,5 @@ phases:
 
 artifacts:
   files:
-    - index.js
-    - package.json
-    - appspec.yaml
+    - '**/*'
   base-directory: dist
